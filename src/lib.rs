@@ -62,7 +62,7 @@ mod tests{
   
   #[test]
   fn test_network_interface() {
-    for itf in interfaces().unwrap() {
+    for itf in interfaces(IFF_ETH).unwrap() {
         println!("===={}: {:?} - {:?} - {}",itf.index, itf.name, itf.addr, itf.is_up);
     }
   } 
