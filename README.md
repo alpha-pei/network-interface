@@ -2,17 +2,16 @@
 
 ![https://github.com/alpha-pei/network-interface/actions](https://github.com/alpha-pei/network-interface/workflows/CI/badge.svg)
 
-> `network-interface` is a node module witch impled by rust. It can list your deivce's network interfaces. 
-
+> `network-interface` is a node module witch impled by rust. It can list your deivce's network interfaces.
 
 # Usage
 
 ```ts
-import {interfaces} from '@yat/network-interface';
+import { interfaces } from '@yat/network-interface'
 
-interfaces(IFF_ETH | IFF_RUNING);
-
+interfaces(IFF_ETH | IFF_RUNING)
 ```
+
 ## Install this test package
 
 ```bash
@@ -20,6 +19,7 @@ yarn add @yat/network-interface
 ```
 
 ### Constants
+
 ```ts
 //Filter Running interfaces
 const IFF_ETH: number

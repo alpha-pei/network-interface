@@ -1,7 +1,7 @@
-import {interfaces} from 'network-interface';
+import { interfaces } from 'network-interface'
 
-const itfs = interfaces(IFF_ETH | IFF_RUNING);
+const itfs = interfaces(IFF_ETH | IFF_RUNING)
 
-console.log('network interfaces test done');
+console.log('network interfaces test done')
 
-confole.log(interfaces());
+confole.log(interfaces())
