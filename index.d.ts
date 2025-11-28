@@ -3,20 +3,25 @@
 export declare class NetInterface {
   name: string
   addr: Array<string>
-  macAddr?: string
   index: number
   isUp: boolean
-  constructor(name: string, addr: Array<string>, macAddr?: string, index: number, isUp: boolean)
+  macAddr?: string
+  constructor(name: string, addr: Array<string>, index: number, isUp: boolean, macAddr?: string)
 }
 
+/** Filter Ethernet interfaces. */
 export const IFF_ETH: number
 
+/** Filter out LOOPBACK interfaces. */
 export const IFF_LOOPBACK: number
 
+/** Filter Running interfaces */
 export const IFF_RUNNING: number
 
+/** Filter out TUN interfaces. Note! This is only a hypothesis. */
 export const IFF_TUNN: number
 
+/** Filter out VPN interfaces. Note! This is only a hypothesis. */
 export const IFF_VPN: number
 
 export const IFF_WIRELESS: number
