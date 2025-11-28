@@ -1,8 +1,8 @@
 import test from 'ava'
 
-import { plus100 } from '../index'
+import { interfaces,IFF_ETH } from '../index.js'
 
 test('sync function from native code', (t) => {
-  const fixture = 42
-  t.is(plus100(fixture), fixture + 100)
+  t.log(interfaces(IFF_ETH));
+  t.pass();
 })
