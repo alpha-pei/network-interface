@@ -7,7 +7,7 @@
 # Usage
 
 ```ts
-import { interfaces } from '@yat/network-interface'
+import { interfaces } from '@alpha-pei/network-interface'
 
 interfaces(IFF_ETH | IFF_RUNING)
 ```
@@ -15,7 +15,7 @@ interfaces(IFF_ETH | IFF_RUNING)
 ## Install this test package
 
 ```bash
-yarn add @yat/network-interface
+yarn add @alpha-pei/network-interface
 ```
 
 ### Constants
