@@ -27,43 +27,48 @@ pub const IFF_LOOPBACK: i32 = network_interface::IFF_LOOPBACK;
 #[napi]
 pub const IFF_RUNNING: i32 = network_interface::IFF_RUNNING;
 
-
 ///
 /// ```
 /// let network_interface = network_interface();
 ///  
 /// ```
-/// 
+///
 #[napi]
 pub fn interfaces(filter: i32) -> Option<Vec<NetInterface>> {
   let interfaces = match NetworkInterface::show() {
     Ok(ifts) => {
       let mut interfaces = Vec::new();
-      for ift in  NetworkInterface::filter(ifts, filter) {
+      for ift in NetworkInterface::filter(ifts, filter) {
         let is_up = ift.is_up();
         interfaces.push(NetInterface {
           name: ift.name,
-          addr: ift.addr.iter().map(|addr| format!("{}", addr.ip().to_string())).collect(),
+          addr: ift
+            .addr
+            .iter()
+            .map(|addr| format!("{}", addr.ip().to_string()))
+            .collect(),
           mac_addr: ift.mac_addr,
           index: ift.index,
           is_up,
         });
       }
       interfaces
-    },
+    }
     Err(_) => return None,
   };
   Some(interfaces)
-  
 }
 #[cfg(test)]
-mod tests{
+mod tests {
   use super::*;
-  
+
   #[test]
   fn test_network_interface() {
     for itf in interfaces(IFF_ETH).unwrap() {
-        println!("===={}: {:?} - {:?} - {}",itf.index, itf.name, itf.addr, itf.is_up);
+      println!(
+        "===={}: {:?} - {:?} - {}",
+        itf.index, itf.name, itf.addr, itf.is_up
+      );
     }
-  } 
+  }
 }
