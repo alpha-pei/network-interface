@@ -10,9 +10,9 @@ use std::vec::Vec;
 pub struct NetInterface {
   pub name: String,
   pub addr: Vec<String>,
-  pub mac_addr: Option<String>,
   pub index: u32,
   pub is_up: bool,
+  pub mac_addr: Option<String>,
 }
 
 /// Filter Ethernet interfaces.
