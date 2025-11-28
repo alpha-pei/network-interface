@@ -45,7 +45,7 @@ pub fn interfaces(filter: i32) -> Option<Vec<NetInterface>> {
           addr: ift
             .addr
             .iter()
-            .map(|addr| format!("{}", addr.ip().to_string()))
+            .map(|addr| format!("{}", addr.ip()))
             .collect(),
           mac_addr: ift.mac_addr,
           index: ift.index,
