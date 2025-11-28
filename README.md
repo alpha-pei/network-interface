@@ -1,4 +1,4 @@
-# `@yat/network-interface`
+# `@alpha-pei/network-interface`
 
 ![https://github.com/alpha-pei/network-interface/actions](https://github.com/alpha-pei/network-interface/workflows/CI/badge.svg)
 
