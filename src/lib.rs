@@ -14,16 +14,28 @@ pub struct NetInterface {
   pub index: u32,
   pub is_up: bool,
 }
+
+/// Filter Ethernet interfaces.
 #[napi]
 pub const IFF_ETH: i32 = network_interface::IFF_ETH;
+
+// Filter Wireless interfaces sometimes it sames as Etherent interfaces.
 #[napi]
 pub const IFF_WIRELESS: i32 = network_interface::IFF_WIRELESS;
+
+/// Filter out VPN interfaces. Note! This is only a hypothesis.
 #[napi]
 pub const IFF_VPN: i32 = network_interface::IFF_VPN;
+
+/// Filter out TUN interfaces. Note! This is only a hypothesis.
 #[napi]
 pub const IFF_TUNN: i32 = network_interface::IFF_TUN;
+
+///Filter out LOOPBACK interfaces.
 #[napi]
 pub const IFF_LOOPBACK: i32 = network_interface::IFF_LOOPBACK;
+
+///Filter Running interfaces
 #[napi]
 pub const IFF_RUNNING: i32 = network_interface::IFF_RUNNING;
 

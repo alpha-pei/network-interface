@@ -1,5 +1,5 @@
 {
-  "name": "@yat/network-interface",
+  "name": "@alpha-pei/network-interface",
   "version": "0.1.0",
   "description": "A cross-platform Node.js native addon to get network interface information using N-API and Rust.",
   "main": "index.js",
