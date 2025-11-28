@@ -1,0 +1,21 @@
+
+[package]
+authors = ["Yahaha <hilow6631@gmail.com>"]
+edition = "2021"
+name = "network-interface-napi"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi = "3.0.0"
+napi-derive = "3.0.0"
+network-interface = {git = "https://github.com/hanskorg/network-interface.git", branch = "main"}
+
+[build-dependencies]
+napi-build = "2"
+
+[profile.release]
+lto = true
+strip = "symbols"
