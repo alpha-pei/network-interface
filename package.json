@@ -49,8 +49,8 @@
     "format:prettier": "prettier . -w",
     "format:toml": "taplo format",
     "format:rs": "cargo fmt",
-    "lint": "oxlint .",
-    "lint:fix": "oxlint --fix .",
+    "lint": "npx oxlint .",
+    "lint:fix": "npx oxlint --fix .",
     "prepublishOnly": "napi prepublish -t npm",
     "test": "ava",
     "preversion": "napi build --platform && git add .",
@@ -76,7 +76,7 @@
   },
   "lint-staged": {
     "*.@(js|ts|tsx)": [
-      "oxlint --fix"
+      "npx oxlint --fix"
     ],
     "*.@(js|ts|tsx|yml|yaml|md|json)": [
       "prettier --write"
